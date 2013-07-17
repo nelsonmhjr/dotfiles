@@ -14,6 +14,7 @@
 [alias]
   # add
   a = add                           # add
+  ap = add -p                       # add with prompt for changes
   chunkyadd = add --patch           # stage commits chunk by chunk
 
   # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
@@ -54,6 +55,7 @@
 
   # pull
   pl = pull                         # pull
+  pr = pull --rebase                # pull with rebase instead merge
 
   # push
   ps = push                         # push
@@ -125,3 +127,5 @@
   enabled = true
 [include]
   path = .gitconfig.user
+[init]
+  templatedir = ~/.yadr/git/template

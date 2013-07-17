@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+PATH="/usr/local/bin:$PATH"
+trap "rm -f .git/tags.$$" EXIT
+if [[ -a "./Gemfile.lock" ]]; then
+  ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --languages=-javascript,sql * `bundle show --paths`
+else
+  ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --languages=-javascript,sql
+fi
+mv .git/tags.$$ .git/tags
