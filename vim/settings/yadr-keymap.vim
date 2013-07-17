@@ -126,6 +126,15 @@ autocmd FileType javascript map <buffer> <D-j> {
 map <D-/> :TComment<CR>
 imap <D-/> <Esc>:TComment<CR>i
 
+"GitGrep - open up a git grep line, with a quote started for the search
+nnoremap ,gg :GitGrep ""<left>
+"GitGrep Current Partial
+nnoremap ,gcp :GitGrepCurrentPartial<CR>
+"GitGrep Current File
+nnoremap ,gcf :call GitGrep(expand("%:t:r"))<CR>
+
+"Gstatus"
+nnoremap ,gs :Gstatus<CR>
 
 "Move back and forth through previous and next buffers
 "with ,z and ,x
