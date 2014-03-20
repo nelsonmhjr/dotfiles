@@ -109,11 +109,11 @@
 [push]
   # 'git push' will push the current branch to its tracking branch
   # the usual default is to push all branches
-  default = tracking
+	default = current
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+	excludesfile = /Users/nelson/.yadr/git/gitignore
 [advice]
   statusHints = false
 [diff]
@@ -129,3 +129,6 @@
   path = .gitconfig.user
 [init]
   templatedir = ~/.yadr/git/template
+[user]
+	name = Nelson Haraguchi
+	email = nelsonmhjr@gmail.com
